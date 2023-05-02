@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+	
+	</style>
+	<script>
+		function on_bulb()
+		{
+           var Lightimg=document.getElementById("bulb_img");
+           Lightimg.src="images/bbulb.jpg";
+           setInterval(b_msg,2000);
+           function b_msg()
+           {
+           	 
+           	 document.getElementById("bulb1_img").src="images/rbulb.jpg";
+           }
+           setInterval(g_msg,4000);
+           function g_msg()
+           {
+           	
+           	document.getElementById("bulb2_img").src="images/bbulb.jpg";
+           }
+           setInterval(r_msg,6000);
+           function r_msg()
+           {
+           	
+           	document.getElementById("bulb3_img").src="images/rbulb.jpg";
+           }
+           setInterval(o_msg,8000);
+           function o_msg()
+           {
+           	
+           	document.getElementById("bulb4_img").src="images/bbulb.jpg";
+           }
+        }
+        function off_bulb()
+        {
+           // var Lightimg=document.getElementById("bulb_img");
+           // Lightimg.src="images/bulb11.jpg";
+          setTimeout(off_msg,1000)
+          function off_msg()
+          {
+            window.location.href="index1.html";
+          }
+        }
+	</script>
+</head>
+<body>
+	<img id="bulb_img" src="images/bulb11.jpg">
+	<img id="bulb1_img" src="images/bulb11.jpg">
+	<img id="bulb2_img" src="images/bulb11.jpg">
+	<img id="bulb3_img" src="images/bulb11.jpg">
+	<img id="bulb4_img" src="images/bulb11.jpg">
+
+	<button id="onbulb" onclick="on_bulb()">ON</button>
+	<button onclick="off_bulb()">OFF</button>
+</body>
+</html>
